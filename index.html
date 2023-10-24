@@ -3,17 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap demo</title>
+    <title>Booms</title>
     <!-- css -->
     <link rel="stylesheet" href="style.css" />
     <!-- bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   </head>
   <body>
     <header>
       <!-- navbar -->
       <section id="navbar">
-        <nav class="navbar navbar-expand-lg" id="all-navbar">
+        <nav class="navbar navbar-expand-lg" id="all-navbar" data-aos="fade-down" style="position: relative; z-index: 3;">
           <div class="container">
             <a class="navbar-brand" href="#"><img src="assets/navbar_logo.png" alt="" id="navbar_logo" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,20 +55,21 @@
     <!-- jumbotron -->
     <section class="jumbotron">
       <div class="container-fluid">
+        <img class="d-sm-none d-lg-block d-lg-block d-none d-lg-block" src="assets/Ellipse_jumbotron.png" alt="" style="position: absolute; right: 0;">
         <div class="row">
           <div class="col-lg-8 px-5 mb-5" id="leftjumbotron">
-            <p class="text-white" style="font-weight: 600">Step Comfortably, Every Step of the Way!</p>
-            <h1 class="text-white mb-4">BRING YOUR FEED AND YOUR LEGS BACK TO LIFE</h1>
-            <p class="text-white mb-5" style="font-weight: 400">If You’re Looking For A Pill-Free Way To Reduce Your Tired, Swollen Or Achy Feet, Then Get A Pair Of Booms</p>
+            <p class="text-white" style="font-weight: 600" data-aos="fade-right">Step Comfortably, Every Step of the Way!</p>
+            <h1 class="text-white mb-4" data-aos="fade-left" data-aos-delay="250">BRING YOUR FEED AND YOUR LEGS BACK TO LIFE</h1>
+            <p class="text-white mb-5" style="font-weight: 400" data-aos="fade-right" data-aos-delay="350">If You’re Looking For A Pill-Free Way To Reduce Your Tired, Swollen Or Achy Feet, Then Get A Pair Of Booms</p>
             <div class="row">
-              <div class="col-md-6" id="button_jumbotron">
-                <button class="me-3 text-white shadow" type="button" id="Purchese-btn">Purchese Now</button>
-                <button class="shadow" type="button" id="View_Collection-btn">View Collection</button>
+              <div class="col-lg-6" id="button_jumbotron">
+                <button class="me-3 mb-3 text-white shadow" type="button" id="Purchese-btn" data-aos="zoom-in-up">Purchese Now</button>
+                <button class="shadow" type="button" id="View_Collection-btn" data-aos="zoom-in-up" data-aos-delay="150">View Collection</button>
               </div>
             </div>
           </div>
           <div class="col-lg-4 pt-3" id="rightjumbotron">
-            <img src="assets/jumbotron_img.png" class="img-fluid" alt="" />
+            <img src="assets/jumbotron_img.png" class="img-fluid" alt="" data-aos="zoom-in"/>
           </div>
         </div>
       </div>
@@ -78,13 +81,13 @@
       <div class="container-fluid text-center mb-5">
         <div class="row justify-content-center">
           <div class="col-9 align-items-center" id="card_features_title">
-            <h1 class="mt-5 mb-3">Our Features</h1>
-            <p class="mb-5" id="features_subtitle">Special fetarures created just for you. We aim to provide a memorable experience when <br />you shop our online store by offering quality products with top-rated customer service.</p>
+            <h1 class="mt-5 mb-3" data-aos="zoom-in">Our Features</h1>
+            <p class="mb-5" id="features_subtitle" data-aos="zoom-in-up" data-aos-delay="150">Special fetarures created just for you. We aim to provide a memorable experience when <br />you shop our online store by offering quality products with top-rated customer service.</p>
           </div>
         </div>
         <div class="row row-cols-1 row-cols-lg-3 g-4 px-5" id="card-features-item">
           <div class="col mb-3">
-            <div class="card border-light shadow">
+            <div class="card border-light shadow" id="card_feature" data-aos="zoom-in-up" data-aos-delay="150">
               <img src="assets/card_feaature1.png" class="card-img-top my-3" alt="..." />
               <div class="card-body">
                 <h5 class="card-title mb-3">Snug & Comfy Fit</h5>
@@ -96,7 +99,7 @@
             </div>
           </div>
           <div class="col mb-3">
-            <div class="card border-light shadow">
+            <div class="card border-light shadow" data-aos="zoom-in-up" data-aos-delay="250">
               <img src="assets/card_feature2.png" class="card-img-top my-3" alt="..." />
               <div class="card-body">
                 <h5 class="card-title mb-3">Help Fight Of Leg Fatigue</h5>
@@ -107,7 +110,7 @@
             </div>
           </div>
           <div class="col mb-3">
-            <div class="card border-light shadow">
+            <div class="card border-light shadow" data-aos="zoom-in-up" data-aos-delay="350">
               <img src="assets/card_feature3.png" class="card-img-top my-3" alt="..." />
               <div class="card-body">
                 <h5 class="card-title mb-3">Easy Returns</h5>
@@ -123,18 +126,18 @@
     <!-- special offer -->
     <section class="special_offer">
       <div class="container-fluid px-5">
-        <h1 class="text-center pt-5 mb-3">Special Offer & Deal</h1>
-        <p class="text-center mb-5" id="offer_subtitle">Get free shipping and bulk of discounts when your order 2 or more paris</p>
-        <div class="row row-cols-1 row-cols-lg-3 g-4 px-5 mb-3">
-          <div class="col mb-3">
-            <div class="card border-light shadow px-3 pt-3">
+        <h1 class="text-center pt-5 mb-3" data-aos="zoom-in">Special Offer & Deal</h1>
+        <p class="text-center mb-5" id="offer_subtitle" data-aos="zoom-in-up" data-aos-delay="150">Get free shipping and bulk of discounts when your order 2 or more paris</p>
+        <div class="row row-cols-1 row-cols-md-3 g-5 mb-3" id="special_offer_item">
+          <div class="col">
+            <div class="card border-light shadow px-3 pt-3" data-aos="zoom-in">
               <div class="row mb-3">
-                <div class="col-4 align-self-center" id="card_discount">
-                  <button style="background-color: #2400ff" class="text-white mb-2" disabled>Best Seller</button>
+                <div class="col-4 align-self-center mb-3" id="card_discount">
+                  <button style="background-color: #2400ff" class="text-white text-start mb-2" disabled>Best Seller</button>
                   <button style="background-color: #c53939" class="text-white" disabled>-44%</button>
                 </div>
-                <div class="col-8 align-self-center">
-                  <ul class="nav justify-content-end">
+                <div class="col-lg-8 align-self-center">
+                  <ul class="nav" id="star_rating">
                     <li class="nav-item me-2">
                       <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
                         <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
@@ -206,37 +209,41 @@
               <img src="assets/offer_img1.png" class="card-img-top my-3 mb-3" alt="..." />
               <div class="card-body px-0">
                 <div class="row">
-                  <div class="col-7">
-                    <p class="card-text">Closed Toe: 15-20 mmHg <br />$25</p>
+                  <div class="col-lg-7">
+                    <p class="card-text mb-3" id="shock_price">Closed Toe: 15-20 mmHg <br />$25</p>
                   </div>
-                  <div class="col-1 align-self-center">
-                    <a href=""><img src="assets/color_picker1.png" alt="" /></a>
-                  </div>
-                  <div class="col-1 align-self-center">
-                    <a href=""><img src="assets/color_picker2.png" alt="" /></a>
-                  </div>
-                  <div class="col-1 align-self-center">
-                    <a href=""><img src="assets/color_picker3.png" alt="" /></a>
-                  </div>
-                  <div class="col-1 align-self-center">
-                    <a href=""><img src="assets/color_picker4.png" alt="" /></a>
-                  </div>
-                  <div class="col-1 align-self-center">
-                    <a href=""><img src="assets/color_picker5.png" alt="" /></a>
+                  <div class="col-xl-5">
+                    <div class="row" id="color_picker_item">
+                      <div class="col-1 align-self-center">
+                        <a href=""><img src="assets/color_picker1.png" alt="" /></a>
+                      </div>
+                      <div class="col-1 align-self-center">
+                        <a href=""><img src="assets/color_picker2.png" alt="" /></a>
+                      </div>
+                      <div class="col-1 align-self-center">
+                        <a href=""><img src="assets/color_picker3.png" alt="" /></a>
+                      </div>
+                      <div class="col-1 align-self-center">
+                        <a href=""><img src="assets/color_picker4.png" alt="" /></a>
+                      </div>
+                      <div class="col-1 align-self-center">
+                        <a href=""><img src="assets/color_picker5.png" alt="" /></a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="col mb-3">
-            <div class="card border-light shadow px-3 pt-3">
+            <div class="card border-light shadow px-3 pt-3" data-aos="zoom-in" data-aos-delay="150">
               <div class="row mb-3">
-                <div class="col-4 align-self-center" id="card_discount">
-                  <button style="background-color: #2400ff" class="text-white mb-2" disabled>Best Seller</button>
+                <div class="col-4 align-self-center mb-3" id="card_discount">
+                  <button style="background-color: #2400ff" class="text-white text-start mb-2" disabled>Best Seller</button>
                   <button style="background-color: #c53939" class="text-white" disabled>-44%</button>
                 </div>
-                <div class="col-8 align-self-center">
-                  <ul class="nav justify-content-end">
+                <div class="col-lg-8 align-self-center">
+                  <ul class="nav" id="star_rating">
                     <li class="nav-item me-2">
                       <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
                         <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
@@ -308,37 +315,41 @@
               <img src="assets/offer_img2.png" class="card-img-top my-3 mb-3" alt="..." />
               <div class="card-body px-0">
                 <div class="row">
-                  <div class="col-7">
-                    <p class="card-text">Closed Toe: 15-20 mmHg <br />$25</p>
+                  <div class="col-lg-7">
+                    <p class="card-text mb-3" id="shock_price">Closed Toe: 15-20 mmHg <br />$25</p>
                   </div>
-                  <div class="col-1 align-self-center">
-                    <a href=""><img src="assets/color_picker1.png" alt="" /></a>
-                  </div>
-                  <div class="col-1 align-self-center">
-                    <a href=""><img src="assets/color_picker2.png" alt="" /></a>
-                  </div>
-                  <div class="col-1 align-self-center">
-                    <a href=""><img src="assets/color_picker3.png" alt="" /></a>
-                  </div>
-                  <div class="col-1 align-self-center">
-                    <a href=""><img src="assets/color_picker4.png" alt="" /></a>
-                  </div>
-                  <div class="col-1 align-self-center">
-                    <a href=""><img src="assets/color_picker5.png" alt="" /></a>
+                  <div class="col-xl-5">
+                    <div class="row" id="color_picker_item">
+                      <div class="col-1 align-self-center">
+                        <a href=""><img src="assets/color_picker1.png" alt="" /></a>
+                      </div>
+                      <div class="col-1 align-self-center">
+                        <a href=""><img src="assets/color_picker2.png" alt="" /></a>
+                      </div>
+                      <div class="col-1 align-self-center">
+                        <a href=""><img src="assets/color_picker3.png" alt="" /></a>
+                      </div>
+                      <div class="col-1 align-self-center">
+                        <a href=""><img src="assets/color_picker4.png" alt="" /></a>
+                      </div>
+                      <div class="col-1 align-self-center">
+                        <a href=""><img src="assets/color_picker5.png" alt="" /></a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="col mb-3">
-            <div class="card border-light shadow px-3 pt-3">
+            <div class="card border-light shadow px-3 pt-3" data-aos="zoom-in" data-aos-delay="250">
               <div class="row mb-3">
-                <div class="col-4 align-self-center" id="card_discount">
-                  <button style="background-color: #2400ff" class="text-white mb-2" disabled>Best Seller</button>
+                <div class="col-4 align-self-center mb-3" id="card_discount">
+                  <button style="background-color: #2400ff" class="text-white text-start mb-2" disabled>Best Seller</button>
                   <button style="background-color: #c53939" class="text-white" disabled>-44%</button>
                 </div>
-                <div class="col-8 align-self-center">
-                  <ul class="nav justify-content-end">
+                <div class="col-lg-8 align-self-center">
+                  <ul class="nav" id="star_rating">
                     <li class="nav-item me-2">
                       <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
                         <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
@@ -410,23 +421,27 @@
               <img src="assets/offer_img3.png" class="card-img-top my-3 mb-3" alt="..." />
               <div class="card-body px-0">
                 <div class="row">
-                  <div class="col-7">
-                    <p class="card-text">Closed Toe: 15-20 mmHg <br />$25</p>
+                  <div class="col-lg-7">
+                    <p class="card-text mb-3" id="shock_price">Closed Toe: 15-20 mmHg <br />$25</p>
                   </div>
-                  <div class="col-1 align-self-center">
-                    <a href=""><img src="assets/color_picker1.png" alt="" /></a>
-                  </div>
-                  <div class="col-1 align-self-center">
-                    <a href=""><img src="assets/color_picker2.png" alt="" /></a>
-                  </div>
-                  <div class="col-1 align-self-center">
-                    <a href=""><img src="assets/color_picker3.png" alt="" /></a>
-                  </div>
-                  <div class="col-1 align-self-center">
-                    <a href=""><img src="assets/color_picker4.png" alt="" /></a>
-                  </div>
-                  <div class="col-1 align-self-center">
-                    <a href=""><img src="assets/color_picker5.png" alt="" /></a>
+                  <div class="col-xl-5">
+                    <div class="row" id="color_picker_item">
+                      <div class="col-1 align-self-center">
+                        <a href=""><img src="assets/color_picker1.png" alt="" /></a>
+                      </div>
+                      <div class="col-1 align-self-center">
+                        <a href=""><img src="assets/color_picker2.png" alt="" /></a>
+                      </div>
+                      <div class="col-1 align-self-center">
+                        <a href=""><img src="assets/color_picker3.png" alt="" /></a>
+                      </div>
+                      <div class="col-1 align-self-center">
+                        <a href=""><img src="assets/color_picker4.png" alt="" /></a>
+                      </div>
+                      <div class="col-1 align-self-center">
+                        <a href=""><img src="assets/color_picker5.png" alt="" /></a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -447,17 +462,17 @@
         <img src="assets/shock_made-img.png" class="img-fluid mb-5" alt="" />
         <div class="row row-cols-1 row-cols-lg-3 g-5 px-5" id="shock-item">
           <div class="col">
-            <div class="card border-light">
+            <div class="card border-light" data-aos="zoom-in"> 
               <img src="assets/shock_made_card1.png" class="card-img-top my-3 img-fluid" alt="..." />
             </div>
           </div>
           <div class="col">
-            <div class="card border-light">
+            <div class="card border-light" data-aos="zoom-in" data-aos-delay="150">
               <img src="assets/shock_made_card2.png" class="card-img-top my-3 img-fluid" alt="..." />
             </div>
           </div>
           <div class="col">
-            <div class="card border-light">
+            <div class="card border-light" data-aos="zoom-in" data-aos-delay="250">
               <img src="assets/shock_made_card3.png" class="card-img-top my-3 img-fluid" alt="..." />
             </div>
           </div>
@@ -469,12 +484,14 @@
     <!-- satifaction -->
     <section id="satifaction">
       <div class="container-fluid">
-        <div class="row" >
-          <div class="col-lg-7 ps-5" id="sactifation_title">
-            <h1 class="text-white pt-5">Satifaction Guarante</h1>
-            <p class="satifaction_subtitle">We are confident that you will absolutely love our socks. If for any <br />reason you're not completely satisfied, we offer a hassle-free <br />refund. It's a straightforward and transparent as that.</p>
+        <div class="row">
+          <div class="col-lg-7 px-5" id="sactifation_title">
+            <h1 class="text-white pt-5" data-aos="fade-right">Satifaction Guarante</h1>
+            <p class="satifaction_subtitle" data-aos="fade-right" data-aos-delay="250">
+              We are confident that you will absolutely love our socks. If for any reason you're not completely satisfied, we offer a hassle-free refund. It's a straightforward and transparent as that.
+            </p>
             <div class="satifaction_btn pb-4">
-              <button class="offer_explore-btn shadow">See Return Policy</button>
+              <button class="offer_explore-btn shadow" data-aos="fade-right" data-aos-delay="350">See Return Policy</button>
             </div>
           </div>
           <div class="col-lg-5 d-lg-block d-lg-block d-none d-lg-block" id="satifaction-img">
@@ -490,27 +507,27 @@
       <div class="container-fluid">
         <div class="row pt-5">
           <div class="col-lg-6 ps-5" id="left_customer">
-            <h1 class="mb-3">What our Customer Say about our Products</h1>
-            <p class="mb-5">We always want to give the best for your product. Here are some of the testimonials that we have received</p>
+            <h1 class="mb-3"  data-aos="fade-right">What our Customer Say about our Products</h1>
+            <p class="mb-5"  data-aos="fade-right" data-aos-delay="150">We always want to give the best for your product. Here are some of the testimonials that we have received</p>
             <div class="customer_btn pb-5">
-              <button class="offer_explore-btn shadow">See All</button>
+              <button class="offer_explore-btn shadow" data-aos="fade-right" data-aos-delay="250">See All</button>
             </div>
           </div>
-          <div class="col-lg-6 " id="right_customer">
-            <div class="card mb-3" style="border-radius: 10px">
+          <div class="col-lg-6" id="right_customer">
+            <div class="card mb-3" style="border-radius: 10px" data-aos="fade-left">
               <div class="row d-flex align-items-center">
-                <div class="col-3 text-center align-self-center">
+                <div class="col-md-3 text-center align-self-center">
                   <img src="assets/testimoni1_img.png" alt="" />
                 </div>
-                <div class="col-9 py-3">
-                  <p>“I absolutely love these compression socks. The <br>material feels good and they are not too hard to put on (after all they are compression socks)”</p>
-                  <div class="row align-items-center">
-                    <div class="col-3 pt-2">
-                      <h5>Jennifer A</h5>
-                    </div>
-                    <div class="col-6">
+                <div class="col-md-9 py-3" id="testimoni_customer">
+                  <p>“I absolutely love these compression socks. The material feels good and they are not too hard to put on (after all they are compression socks)”</p>
+                  <div class="row align-items-center pt-2">
+                    <div class="col-10 align-self-center pt-1">
                       <ul class="nav">
-                        <li class="nav-item me-2">
+                        <li class="nav-item pe-3 pt-1">
+                          <h5>Jennifer A</h5>
+                        </li>
+                        <li class="nav-item me-1">
                           <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
                             <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                             <style>
@@ -523,7 +540,7 @@
                             />
                           </svg>
                         </li>
-                        <li class="nav-item me-2">
+                        <li class="nav-item me-1">
                           <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
                             <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                             <style>
@@ -536,7 +553,7 @@
                             />
                           </svg>
                         </li>
-                        <li class="nav-item me-2">
+                        <li class="nav-item me-1">
                           <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
                             <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                             <style>
@@ -549,7 +566,7 @@
                             />
                           </svg>
                         </li>
-                        <li class="nav-item me-2">
+                        <li class="nav-item me-1">
                           <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
                             <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                             <style>
@@ -562,7 +579,7 @@
                             />
                           </svg>
                         </li>
-                        <li class="nav-item me-2">
+                        <li class="nav-item">
                           <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
                             <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                             <style>
@@ -577,27 +594,27 @@
                         </li>
                       </ul>
                     </div>
-                    <div class="col-3 ps-5">
+                    <div class="col-2 pe-5" id="testimoni_icon_img">
                       <img src="assets/testimoni_icon.png" alt="" />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="card mb-3" style="border-radius: 10px">
-              <div class="row">
-                <div class="col-3 text-center align-self-center">
+            <div class="card mb-3" style="border-radius: 10px" data-aos="fade-left" data-aos-delay="150">
+              <div class="row d-flex align-items-center">
+                <div class="col-md-3 text-center align-self-center">
                   <img src="assets/testiomni2_img.png" alt="" />
                 </div>
-                <div class="col-9 py-3">
+                <div class="col-md-9 py-3" id="testimoni_customer">
                   <p>Feel great, less swelling for sure! I’ve used other brands that DO NOT COMPARE at ALL!!! Worth every penny!!!</p>
                   <div class="row align-items-center pt-3">
-                    <div class="col-3 pt-2">
-                      <h5>Lina A</h5>
-                    </div>
-                    <div class="col-6">
+                    <div class="col-10 align-self-center pt-1">
                       <ul class="nav">
-                        <li class="nav-item me-2">
+                        <li class="nav-item pe-3 pt-1">
+                          <h5>Lina A</h5>
+                        </li>
+                        <li class="nav-item me-1">
                           <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
                             <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                             <style>
@@ -610,7 +627,7 @@
                             />
                           </svg>
                         </li>
-                        <li class="nav-item me-2">
+                        <li class="nav-item me-1">
                           <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
                             <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                             <style>
@@ -623,7 +640,7 @@
                             />
                           </svg>
                         </li>
-                        <li class="nav-item me-2">
+                        <li class="nav-item me-1">
                           <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
                             <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                             <style>
@@ -636,7 +653,7 @@
                             />
                           </svg>
                         </li>
-                        <li class="nav-item me-2">
+                        <li class="nav-item me-1">
                           <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
                             <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                             <style>
@@ -649,7 +666,7 @@
                             />
                           </svg>
                         </li>
-                        <li class="nav-item me-2">
+                        <li class="nav-item">
                           <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
                             <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                             <style>
@@ -664,27 +681,27 @@
                         </li>
                       </ul>
                     </div>
-                    <div class="col-3 ps-5">
+                    <div class="col-2 pe-5" id="testimoni_icon_img">
                       <img src="assets/testimoni_icon.png" alt="" />
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="card mb-5" style="border-radius: 10px">
-              <div class="row">
-                <div class="col-3 text-center align-self-center">
+            <div class="card mb-5" style="border-radius: 10px"  data-aos="fade-left" data-aos-delay="250">
+              <div class="row d-flex align-items-center">
+                <div class="col-md-3 text-center align-self-center">
                   <img src="assets/testimoni3_img.png" alt="" />
                 </div>
-                <div class="col-9 py-3">
+                <div class="col-md-9 py-3" id="testimoni_customer">
                   <p>Great socks, your feet and legs will be so happy to have them</p>
-                  <div class="row align-items-center pt-5">
-                    <div class="col-3 pt-2">
-                      <h5>Lucas A</h5>
-                    </div>
-                    <div class="col-6">
+                  <div class="row align-items-center pt-4">
+                    <div class="col-10 align-self-center pt-1">
                       <ul class="nav">
-                        <li class="nav-item me-2">
+                        <li class="nav-item pe-3 pt-1">
+                          <h5>Lucas A</h5>
+                        </li>
+                        <li class="nav-item me-1">
                           <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
                             <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                             <style>
@@ -697,7 +714,7 @@
                             />
                           </svg>
                         </li>
-                        <li class="nav-item me-2">
+                        <li class="nav-item me-1">
                           <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
                             <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                             <style>
@@ -710,7 +727,7 @@
                             />
                           </svg>
                         </li>
-                        <li class="nav-item me-2">
+                        <li class="nav-item me-1">
                           <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
                             <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                             <style>
@@ -723,7 +740,7 @@
                             />
                           </svg>
                         </li>
-                        <li class="nav-item me-2">
+                        <li class="nav-item me-1">
                           <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
                             <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                             <style>
@@ -736,7 +753,7 @@
                             />
                           </svg>
                         </li>
-                        <li class="nav-item me-2">
+                        <li class="nav-item">
                           <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
                             <!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                             <style>
@@ -751,7 +768,7 @@
                         </li>
                       </ul>
                     </div>
-                    <div class="col-3 ps-5">
+                    <div class="col-2 pe-5" id="testimoni_icon_img">
                       <img src="assets/testimoni_icon.png" alt="" />
                     </div>
                   </div>
@@ -765,12 +782,14 @@
     <!-- akhir customer -->
 
     <!-- footer -->
-    <footer>
+    <footer class="footer">
       <div class="container">
         <div class="row row-cols-2 pt-5" id="footer-container">
           <div class="col-lg-3">
             <h5>Can We Help?</h5>
-            <a href=""><p>Email Us: <br />support@wearbooms.com</p></a>
+            <a href=""
+              ><p>Email Us: <br />support@wearbooms.com</p></a
+            >
             <p>Call: 1-800-730-1089</p>
             <p>USA - California</p>
           </div>
@@ -791,7 +810,7 @@
             <a href=""><p>Create Account</p></a>
             <a href=""><p>About Us</p></a>
           </div>
-          <div class="col-lg-1" id="footer-item" >
+          <div class="col-lg-1" id="footer-item">
             <h5>Follow Us</h5>
             <div class="row">
               <div class="col-1 me-3">
@@ -840,6 +859,16 @@
     </footer>
     <!-- akhir footer -->
 
+    <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
+
   </body>
 </html>

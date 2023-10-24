@@ -6,8 +6,8 @@
 
 html,
 body {
-  max-width: 100%;
-  overflow-x: hidden;
+  max-width: 100% !important;
+  overflow-x: hidden !important;
 }
 
 
@@ -22,9 +22,10 @@ body {
     font-size: 35px;
   }
 
-  #button_jumbotron {
+  #button_jumbotron button {
     text-align: center;
     justify-content: center;
+    width: 100%;
   }
 
   #rightjumbotron img{
@@ -46,12 +47,20 @@ body {
 
   
   /* special offer */
+  #special_offer_item {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
   .special_offer .container-fluid h1 {
     font-size: 35px;
   }
 
   #offer_subtitle {
     font-size: 20px;
+  }
+
+  #card_discount .text-white {
+    font-size: 12px;
   }
   /* akhir special offer */
 
@@ -67,8 +76,8 @@ body {
   }
 
   #shock-item .col {
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
   /* akhir shock made */
 
@@ -105,6 +114,22 @@ body {
   #left_customer .customer_btn .offer_explore-btn{
     width: 100%;
   }
+  #testimoni_customer {
+    padding: 20px 30px;
+  }
+
+  #right_customer .card h5 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  #testimoni_customer .row .col-10 .nav .nav-item, h5 {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  body #testimoni_icon_img {
+    margin-left: auto;
+  }
   /* akhir testimoni customer */
 
 }
@@ -114,6 +139,7 @@ body {
 
 /* responsif tablet */
 @media screen and (max-width: 991px) {
+  
   /* navbar */
   #all-navbar {
     background-color: white;
@@ -136,20 +162,28 @@ body {
   /* akhir jumbotron */
 
   /* card feature */
-  .card-features-item {
-    padding-right: 50px;
-    padding-left: 50px;
+  body #card-features-item .col{
+    padding-right: 30px;
+    padding-left: 30px;
   }
+
   #shock-item .card img {
     margin-left: auto;
     margin-right: auto;
   }
   /* akhir card feature */
 
+  /* special offer */
+
+  #star_rating {
+    justify-content: start;
+  }
+  /* akhir special offer */
+
   /* testimoni customer */
   #right_customer {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
   /* akhir testimoni customer */
 
@@ -228,7 +262,6 @@ button {
 
 #rightjumbotron {
   padding-top: 0px;
-  background-image: url(assets/Ellipse_jumbotron.png);
 }
 
 #rightjumbotron img {
@@ -261,8 +294,21 @@ p {
   font-size: 23px;
   font-weight: 500;
 }
-/* akhir card-features */
 
+#card-features-item .card {
+  height: 339px;
+  overflow-y: scroll; /* Add the ability to scroll */
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+#card-features-item .card::-webkit-scrollbar{
+  display: none; 
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#card-features-item {
+-ms-overflow-style: none;  /* IE and Edge */
+scrollbar-width: none;  /* Firefox */
+/* akhir card-features */}
 
  
 /* card offer */
@@ -270,6 +316,10 @@ p {
   background-image: url(assets/bg_offer.png);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.special_offer ul {
+  justify-content: end;
 }
 
 #card_discount button {
@@ -417,7 +467,14 @@ h5 {
 #right_customer .card h5 {
   font-size: 16px;
   font-weight: 600;
-  margin-bottom: 0;
+}
+
+body #testimoni_icon_img {
+  text-align: right
+}
+
+body #testimoni_icon_img img {
+  text-align: right
 }
 /* akhir customer */
 
