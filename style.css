@@ -51,7 +51,7 @@ body {
 
   
   /* special offer */
-  .special_offer .container-fluid h1 {
+  .special_offer .container h1 {
     font-size: 35px;
   }
 
